@@ -25,7 +25,11 @@ export default function Projects () {
         <div className={styles['main-container']} id='projects'>
             <h1>Here are a few apps I've built and tinkered with !</h1>
             <div className={styles['project-container']}>
-            
+            {projectlist.map((item) => {
+              return (
+                <ProjectCard title={item.title} img={item.img} desc={item.desc} link={item.website} id={item.uniqueId}/>
+              )
+            })}
             </div>
         </div>
     )
